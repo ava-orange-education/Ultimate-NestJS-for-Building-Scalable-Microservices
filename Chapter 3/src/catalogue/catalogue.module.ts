@@ -12,7 +12,7 @@ import { CatalogueService } from './catalogue.service';
       isGlobal: true,
       load: [configuration],
       validationSchema,
-      envFilePath: `.env.catalogue.${process.env.NODE_ENV}`,
+      envFilePath: `./src/catalogue/.env.catalogue.${process.env.NODE_ENV}`,
     }),
     SharedModule,
   ],
