@@ -1,31 +1,31 @@
 {
-    "version": "0.2.0",
-    "configurations": [
-      {
-        "type": "node",
-        "request": "launch",
-        "name": "Debug Chapter 2",
-        "runtimeExecutable": "npm",
-        "args": ["run", "start:dev"],
-        "cwd": "${workspaceFolder}/Chapter 2",
-        "sourceMaps": true,
-        "env": {
-            "NODE_ENV": "development"
-        },
-        "console": "integratedTerminal"
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug Chapter 2",
+      "runtimeExecutable": "npm",
+      "args": ["run", "start:dev"],
+      "cwd": "${workspaceFolder}/Chapter 2",
+      "sourceMaps": true,
+      "env": {
+        "NODE_ENV": "dev"
       },
-      {
-        "type": "node",
-        "request": "launch",
-        "name": "Debug Chapter 3",
-        "runtimeExecutable": "npm",
-        "args": ["run", "start:dev"],
-        "cwd": "${workspaceFolder}/Chapter 3",
-        "sourceMaps": true,
-        "env": {
-            "NODE_ENV": "development"
-        },
-        "console": "integratedTerminal"
-      }
-    ]
-  }
+      "console": "integratedTerminal"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug Chapter 3",
+      "runtimeExecutable": "npm",
+      "args": ["run", "start:dev"],
+      "cwd": "${workspaceFolder}/Chapter 3",
+      "sourceMaps": true,
+      "env": {
+        "NODE_ENV": "dev"
+      },
+      "console": "integratedTerminal"
+    }
+  ]
+}

@@ -11,8 +11,11 @@ export class CatalogueService {
     { id: 3, name: 'Diamond Ring', price: 249.0 },
   ];
 
-  getDatabaseUrl() {
-    return this.configService.get<string>('databaseUrl');
+  getConnectionInfo() {
+    return {
+      dbUrl: this.configService.get<string>('database.url'),
+      dbName: this.configService.get<string>('database.name'),
+    };
   }
 
   /**
