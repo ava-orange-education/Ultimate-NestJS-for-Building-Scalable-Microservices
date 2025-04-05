@@ -13,6 +13,19 @@
             "NODE_ENV": "development"
         },
         "console": "integratedTerminal"
+      },
+      {
+        "type": "node",
+        "request": "launch",
+        "name": "Debug Chapter 3",
+        "runtimeExecutable": "npm",
+        "args": ["run", "start:dev"],
+        "cwd": "${workspaceFolder}/Chapter 3",
+        "sourceMaps": true,
+        "env": {
+            "NODE_ENV": "development"
+        },
+        "console": "integratedTerminal"
       }
     ]
   }
