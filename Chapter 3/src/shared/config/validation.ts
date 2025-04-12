@@ -7,4 +7,6 @@ export const validationSchema = Joi.object({
   LOG_LEVEL: Joi.string()
     .valid('debug', 'info', 'warn', 'error')
     .default('debug'),
+  SERVICE_NAME: Joi.string().required(),
+  AWS_REGION: Joi.string().required(),
 });

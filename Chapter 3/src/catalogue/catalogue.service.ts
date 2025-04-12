@@ -1,9 +1,13 @@
 import { Injectable } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
+import { LoggerService } from '../shared/logger/logger.service';
 
 @Injectable()
 export class CatalogueService {
-  constructor(private readonly configService: ConfigService) {}
+  constructor(
+    private readonly configService: ConfigService,
+    private readonly logger: LoggerService,
+  ) {}
 
   private readonly products = [
     { id: 1, name: 'Gold Necklace', price: 129.99 },
@@ -27,6 +31,7 @@ export class CatalogueService {
   }
 
   getCatalogue() {
+    this.logger.log('Getting catalogue');
     return this.findAll();
   }
 }

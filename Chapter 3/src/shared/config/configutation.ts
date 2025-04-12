@@ -7,4 +7,10 @@ export default () => ({
     url: process.env.DATABASE_URL,
     name: process.env.DATABASE_NAME || 'catalogue',
   },
+  aws: {
+    region: process.env.AWS_REGION || 'us-east-1',
+  },
+  service: {
+    name: process.env.SERVICE_NAME || 'default-service',
+  },
 });
