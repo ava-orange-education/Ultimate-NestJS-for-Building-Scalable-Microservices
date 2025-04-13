@@ -1,7 +1,7 @@
 import { Inject, Injectable, Scope } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { REQUEST } from '@nestjs/core';
-import winston, { format } from 'winston';
+import * as winston from 'winston';
 import WinstonCloudwatch from 'winston-cloudwatch';
 
 @Injectable({ scope: Scope.REQUEST })
@@ -17,7 +17,10 @@ export class LoggerService {
 
     this.logger = winston.createLogger({
       level: this.configService.get('LOG_LEVEL') || 'info',
-      format: format.combine(format.timestamp(), format.json()),
+      format: winston.format.combine(
+        winston.format.timestamp(),
+        winston.format.json(),
+      ),
       transports: [new winston.transports.Console()],
     });
 
