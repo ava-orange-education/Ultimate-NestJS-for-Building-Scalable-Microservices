@@ -1,23 +1,22 @@
 import { Injectable } from '@nestjs/common';
 
 @Injectable()
-export class CatalogueService {
+export class CatalogService {
     private readonly products = [
         { id: 1, name: 'Gold Necklace', price: 129.99 },
         { id: 2, name: 'Silver Earrings', price: 49.5 },
-        { id: 3, name: 'Diamond Ring', price: 249.0 }
-      ];
-    
-      /**
-       * Get all products
-       * @returns {Array}
-       */
-      findAll() {
-        return this.products;
-      }
+        { id: 3, name: 'Diamond Ring', price: 249.0 },
+    ];
 
-      getCatalogue() {
+    /**
+     * Get all products
+     * @returns {Array}
+     */
+    findAll() {
+        return this.products;
+    }
+
+    getCatalogue() {
         return this.findAll();
-      }
-    
+    }
 }

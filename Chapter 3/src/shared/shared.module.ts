@@ -4,8 +4,8 @@ import { LoggerModule } from './logger/logger.module';
 import { LoggingInterceptor } from './interceptors/logging.interceptor';
 
 @Module({
-  imports: [LoggerModule],
-  providers: [HttpExceptionFilter, LoggingInterceptor],
-  exports: [LoggerModule, HttpExceptionFilter, LoggingInterceptor],
+    imports: [LoggerModule],
+    providers: [HttpExceptionFilter, LoggingInterceptor],
+    exports: [LoggerModule, HttpExceptionFilter, LoggingInterceptor],
 })
 export class SharedModule {}
